@@ -6,4 +6,4 @@ This repo include the code and datasets for paper: Enhancing Reentrancy Vulnerab
 
 ## Model-Architecture
 
-![HSLLM-RVDR](overall_framework-1.png)
+![HSLLM-RVDR](overall_framework.png)
