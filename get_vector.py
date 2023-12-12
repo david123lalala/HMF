@@ -62,7 +62,6 @@ def main():
         df = np.load(find_vector_filename, allow_pickle=True)
     else:
         df = get_vectors()
-
         np.save(vector_filename, df)
 
 
