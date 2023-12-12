@@ -125,11 +125,9 @@ def get_data_augmentation(file_list):
 def get_total_data_augmentation():
 
     #upload file_number
-    file_number=np.loadtxt("data/exp_data/final_reentrancy_get_opcode_number.txt", delimiter=',')
-    file_val=np.loadtxt('data/exp_data/final_reentrancy_oyente.txt',delimiter=',')
+    file_number=np.loadtxt("data/file_number.txt", delimiter=',')
+    file_val=np.loadtxt('data/file_val.txt',delimiter=',')
 
-    print('len(file_number)',len(file_number))
-    print('len(file_oyente)',len(file_val))
 
     #save_data
     data_json=[]
@@ -187,7 +185,7 @@ def main():
 
     code_gadget_file=get_total_data_augmentation()
 
-    data_flow_file_path='data_augmentation/da_reentrancy/data_flow_from_AST.json'
+    data_flow_file_path='data_augmentation/da_reentrancy/augment_data.json'
 
     with open (data_flow_file_path,'rb') as f:
         data_flow_file=json.load(f)
@@ -196,7 +194,7 @@ def main():
 
  
     save_file=[]
-    save_file_path='data_augmentation/da_reentrancy/code_gadget_with_data_flow.json'
+    save_file_path='data_augmentation/da_reentrancy/save_augment_data.json'
 
     for i in range(len(code_gadget_file)):
         data_flow=[]

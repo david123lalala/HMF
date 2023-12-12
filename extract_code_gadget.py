@@ -118,7 +118,7 @@ def find_call_value(file_path):
 
 
 if __name__ == "__main__":
-    have_call_value_text_number= np.loadtxt("file_number.txt", delimiter=',')
+    have_call_value_text_number= np.loadtxt("data/file_number.txt", delimiter=',')
     
     # count_call_value_0=0
     # count_call_value_1=0

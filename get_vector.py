@@ -10,9 +10,7 @@ import os
 
 #code gadget的file_path
 back_forward_code_gadget_path='data/exp_data/reentrancy_back_forward/'
-single_code_gadget_path='data/exp_data/reentrancy_single/'
-cd_dd_path='data/exp_data/dd_cd_reentrancy/'
-source_code_path='data/exp_data/reentrancy_source_code_pkl/'
+
 
 def get_vectors():
     # upload codebert_base
@@ -32,7 +30,7 @@ def get_vectors():
         code_all=''
         count += 1
         print("Processing fragments...", count, end="\r")
-        tmp_path=single_code_gadget_path+str(int(contract_number[k]))+'.pkl'
+        tmp_path=back_forward_code_gadget_path+str(int(contract_number[k]))+'.pkl'
 
         with open(tmp_path, 'rb') as f:
             tmp_file = pickle.load(f)
@@ -55,11 +53,8 @@ def get_vectors():
     return df
 
 def main():
-    # vector_filename = '/root/123/'+'codebert_'+'reentrancy_back_forward'+ "_fragment_vectors"
-    vector_filename = '/root/123/'+'codebert_'+'reentrancy_single'+ "_fragment_vectors"
-    # vector_filename = '/root/123/'+'codebert_'+'reentrancy_cd_dd'+ "_fragment_vectors"
-    # vector_filename = '/root/123/'+'codebert_'+'reentrancy_source_code'+ "_fragment_vectors"
-
+    vector_filename = '/root/123/'+'codebert_'+'reentrancy_back_forward'+ "_fragment_vectors"
+    
     final_vector=[]
     find_vector_filename=vector_filename+'.npy'
 
