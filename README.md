@@ -29,6 +29,9 @@ python main.py --model transformer_cnn
 
 # Details:
 
+## main.py
+This python file is entrance of overall framework. 
+
 ## extract_code_gadget.py
 This python file can extract function-call-related code gadgets.
 
